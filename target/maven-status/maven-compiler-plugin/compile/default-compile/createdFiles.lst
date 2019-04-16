@@ -1,0 +1,12 @@
+ua\lviv\iot\officeAppliances\models\Color.class
+ua\lviv\iot\officeAppliances\managers\OfficeAppliancesManager.class
+ua\lviv\iot\officeAppliances\models\Material.class
+ua\lviv\iot\officeAppliances\managers\SortType.class
+ua\lviv\iot\officeAppliances\models\Stapler.class
+ua\lviv\iot\officeAppliances\models\OfficeAppliance.class
+ua\lviv\iot\officeAppliances\managers\IofficeAppliancesManager.class
+ua\lviv\iot\officeAppliances\models\StationeryKnife.class
+ua\lviv\iot\officeAppliances\models\Calculator.class
+ua\lviv\iot\officeAppliances\Main.class
+ua\lviv\iot\officeAppliances\models\Board.class
+ua\lviv\iot\officeAppliances\models\Size.class
