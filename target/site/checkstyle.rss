@@ -25,8 +25,8 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2019</copyright>
     <item>
-      <title>File: 12,
-             Errors: 299,
+      <title>File: 2,
+             Errors: 0,
              Warnings: 0,
              Infos: 0
       </title>
@@ -55,7 +55,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  26
+                  0
                 </td>
               </tr>
                           <tr>
@@ -69,147 +69,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  33
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://maven.apache.org/checkstyle.html#ua.lviv.iot.officeAppliances.managers.SortType.java">ua/lviv/iot/officeAppliances/managers/SortType.java</a>
-                </td>
-                <td>
                   0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  2
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://maven.apache.org/checkstyle.html#ua.lviv.iot.officeAppliances.managers.IofficeAppliancesManager.java">ua/lviv/iot/officeAppliances/managers/IofficeAppliancesManager.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  4
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://maven.apache.org/checkstyle.html#ua.lviv.iot.officeAppliances.models.Material.java">ua/lviv/iot/officeAppliances/models/Material.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  3
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://maven.apache.org/checkstyle.html#ua.lviv.iot.officeAppliances.models.Stapler.java">ua/lviv/iot/officeAppliances/models/Stapler.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  26
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://maven.apache.org/checkstyle.html#ua.lviv.iot.officeAppliances.models.OfficeAppliance.java">ua/lviv/iot/officeAppliances/models/OfficeAppliance.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  51
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://maven.apache.org/checkstyle.html#ua.lviv.iot.officeAppliances.models.Size.java">ua/lviv/iot/officeAppliances/models/Size.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  29
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://maven.apache.org/checkstyle.html#ua.lviv.iot.officeAppliances.models.Calculator.java">ua/lviv/iot/officeAppliances/models/Calculator.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  38
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://maven.apache.org/checkstyle.html#ua.lviv.iot.officeAppliances.models.Color.java">ua/lviv/iot/officeAppliances/models/Color.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  33
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://maven.apache.org/checkstyle.html#ua.lviv.iot.officeAppliances.models.StationeryKnife.java">ua/lviv/iot/officeAppliances/models/StationeryKnife.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  17
-                </td>
-              </tr>
-                          <tr>
-                <td>
-                  <a href="http://maven.apache.org/checkstyle.html#ua.lviv.iot.officeAppliances.models.Board.java">ua/lviv/iot/officeAppliances/models/Board.java</a>
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  37
                 </td>
               </tr>
                       </tbody>

@@ -31,11 +31,7 @@
 
 
  
-        <!-- Modifier Checks                                    -->
-      
-
-
-
+     
         <!-- Checks for common coding problems               -->
         <module name="IllegalInstantiation"/>
         <module name="InnerAssignment"/>
