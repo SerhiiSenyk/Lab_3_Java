@@ -52,8 +52,7 @@ public class OfficeAppliancesManager implements IofficeAppliancesManager {
                     Comparator.comparing(OfficeAppliance::getPrice));
 
         } else {
-            Collections.sort(officeAppliances, 
-                    Comparator.comparing(OfficeAppliance::getPrice).reversed());
+            Collections.sort(officeAppliances, Comparator.comparing(OfficeAppliance::getPrice).reversed());
         }
     }
 

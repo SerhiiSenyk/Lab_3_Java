@@ -46,8 +46,7 @@ public class Main {
         officeAppliances.add(stationeryKnife);
         officeAppliances.add(calculator);
 
-        OfficeAppliancesManager manager = 
-                new OfficeAppliancesManager(officeAppliances);
+        OfficeAppliancesManager manager =  new OfficeAppliancesManager(officeAppliances);
         System.out.println("Selection by color");
         System.out.println(manager.findByColor(new Color(128, 128, 128)));
         System.out.println("Sort by ascending price");
