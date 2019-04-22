@@ -26,7 +26,6 @@ public class Main {
 
     public static void main(String[] args) {
         List<OfficeAppliance> officeAppliances = new LinkedList<>();
-
         Board board = new Board("chalky", new Size(100.0, 80.0, 5.0),
                 "aluminum", 250.0, new Color(0, 128, 128), 25.0, "Economix",
                 Material.METAL);
@@ -45,12 +44,11 @@ public class Main {
         officeAppliances.add(stapler);
         officeAppliances.add(stationeryKnife);
         officeAppliances.add(calculator);
-
-        OfficeAppliancesManager manager =  new OfficeAppliancesManager(officeAppliances);
+        OfficeAppliancesManager manager =  new OfficeAppliancesManager();
+        System.out.println(officeAppliances);
         System.out.println("Selection by color");
         System.out.println(manager.findByColor(new Color(128, 128, 128)));
         System.out.println("Sort by ascending price");
-
         manager.sortByPrice(officeAppliances, SortType.ASCENDING);
         System.out.println(officeAppliances);
         manager.sortByPrice(officeAppliances, SortType.DESCENDING);

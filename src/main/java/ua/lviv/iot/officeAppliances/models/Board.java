@@ -25,7 +25,6 @@ public class Board extends OfficeAppliance {
     }
 
     public Board() {
-        // this(0, 0, 0);
     }
 
     public String getSurface() {

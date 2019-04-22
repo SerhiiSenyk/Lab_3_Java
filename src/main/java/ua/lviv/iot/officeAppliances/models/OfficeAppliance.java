@@ -27,7 +27,6 @@ public abstract class OfficeAppliance {
     }
 
     public OfficeAppliance() {
-        //this(0, , 0, 0, 0);
     }
 
     public double getPrice() {
@@ -68,11 +67,6 @@ public abstract class OfficeAppliance {
 
     public void setMaterial(Material material) {
         this.material = material;
-    }
-
-    @Override
-    public String toString() {
-        return printFields();
     }
 
     public String printFields() {

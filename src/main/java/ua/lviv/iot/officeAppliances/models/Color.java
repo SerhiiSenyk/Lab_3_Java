@@ -49,6 +49,12 @@ public class Color {
         this.blue = blue;
     }
 
+    public void setColor(int red, int green, int blue) {
+        this.red = red;
+        this.green = green;
+        this.blue = blue;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (obj == this) {
