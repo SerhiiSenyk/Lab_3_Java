@@ -50,12 +50,6 @@ public class Color {
     }
 
     @Override
-    public int hashCode() {
-        assert false : "hashCode not designed";
-        return 42; // any arbitrary constant will do
-    }
-
-    @Override
     public boolean equals(Object obj) {
         if (obj == this) {
             return true;
@@ -68,6 +62,15 @@ public class Color {
         }
         Color other = (Color) obj;
         return red == other.red && green == other.green && blue == other.blue;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 61 * hash + this.red;
+        hash = 61 * hash + this.green;
+        hash = 61 * hash + this.blue;
+        return hash;
     }
 
 }

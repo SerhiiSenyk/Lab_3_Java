@@ -26,7 +26,7 @@ public class OfficeAppliancesManager implements IofficeAppliancesManager {
     }
 
     public OfficeAppliancesManager() {
-
+        officeAppliances = null;
     }
 
     final public List<OfficeAppliance> getOfficeAppliances() {
