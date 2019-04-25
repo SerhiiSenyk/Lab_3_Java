@@ -29,24 +29,22 @@ public class OfficeAppliancesManager implements IofficeAppliancesManager {
         officeAppliances = null;
     }
 
-    final public List<OfficeAppliance> getOfficeAppliances() {
+    public List<OfficeAppliance> getOfficeAppliances() {
         return officeAppliances;
     }
 
-    final public void
-            setOfficeAppliances(List<OfficeAppliance> officeAppliances) {
+     public void setOfficeAppliances(List<OfficeAppliance> officeAppliances) {
         this.officeAppliances = officeAppliances;
     }
 
     @Override
-    final public List<OfficeAppliance> findByColor(Color color) {
+    public List<OfficeAppliance> findByColor(Color color) {
         return officeAppliances.stream().filter(col -> col.getColor().
                 equals(color)).collect(Collectors.toList());
     }
 
     @Override
-    final public void
-            sortByPrice(List<OfficeAppliance> officeAppliances, SortType sortType) {
+    public void sortByPrice(List<OfficeAppliance> officeAppliances, SortType sortType) {
         if (sortType == ASCENDING) {
             Collections.sort(officeAppliances,
                     Comparator.comparing(OfficeAppliance::getPrice));
@@ -57,7 +55,7 @@ public class OfficeAppliancesManager implements IofficeAppliancesManager {
     }
 
     @Override
-    final public void sortByWeight(List<OfficeAppliance> officeAppliances, SortType sortType) {
+    public void sortByWeight(List<OfficeAppliance> officeAppliances, SortType sortType) {
         if (sortType == ASCENDING) {
             Collections.sort(officeAppliances, Comparator.comparing(OfficeAppliance::getWeight));
         } else {

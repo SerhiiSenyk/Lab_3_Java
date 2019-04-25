@@ -44,6 +44,6 @@ public class Stapler extends OfficeAppliance {
     @Override
     public String toString() {
         return "Stapler : \n" + "Staples size : " + staplesSize + "\nPower : "
-                + power + printFields();
+                + power + super.toString();
     }
 }

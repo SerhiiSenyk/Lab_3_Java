@@ -58,6 +58,6 @@ public class Board extends OfficeAppliance {
                 + "\n\tlenght : " + getSizeOfSurface().getLenght()
                 + "\n\twidth : " + getSizeOfSurface().getWidth()
                 + "\n\theight : " + getSizeOfSurface().getHeight()
-                + "\ntypeOfFrame : " + typeOfFrame + printFields();
+                + "\ntypeOfFrame : " + typeOfFrame + super.toString();
     }
 }
