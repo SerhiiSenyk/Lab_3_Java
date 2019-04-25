@@ -19,6 +19,7 @@ import org.junit.Test;
  * @author Serhii-PC
  */
 public class OfficeApplianceTest {
+
     @Test
     public void validateSettersAndGetters() {
         PojoClass officeAppliancePojo = PojoClassFactory.getPojoClass(OfficeAppliance.class);
@@ -28,5 +29,5 @@ public class OfficeApplianceTest {
         pojoValidator.addTester(new SetterTester());
         pojoValidator.addTester(new GetterTester());
         pojoValidator.runValidation(officeAppliancePojo);
-    }   
+    }
 }

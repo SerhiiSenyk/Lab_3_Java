@@ -69,7 +69,8 @@ public abstract class OfficeAppliance {
         this.material = material;
     }
 
-    public String printFields() {
+    @Override
+    public String toString() {
         return "\nPrice : " + getPrice() + "\nColor : \n" + "\tred : "
                 + getColor().getRed() + "\n\tgreen : " + getColor().getGreen()
                 + "\n\tblue : " + getColor().getBlue() + "\nWeight : "

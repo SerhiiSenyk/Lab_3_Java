@@ -14,13 +14,12 @@ import com.openpojo.validation.test.impl.GetterTester;
 import com.openpojo.validation.test.impl.SetterTester;
 import org.junit.Test;
 
-
-
 /**
  *
  * @author Serhii-PC
  */
 public class SizeTest {
+
     @Test
     public void validateSettersAndGetters() {
         PojoClass sizePojo = PojoClassFactory.getPojoClass(Size.class);

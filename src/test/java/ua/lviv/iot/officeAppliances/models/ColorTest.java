@@ -28,7 +28,7 @@ public class ColorTest {
     @Test
     public void validateSettersAndGetters() {
         PojoClass colorPojo = PojoClassFactory.getPojoClass(Color.class);
-        PojoValidator pojoValidator = new PojoValidator(); 
+        PojoValidator pojoValidator = new PojoValidator();
         pojoValidator.addRule(new SetterMustExistRule());
         pojoValidator.addRule(new GetterMustExistRule());
         pojoValidator.addTester(new SetterTester());
@@ -38,18 +38,18 @@ public class ColorTest {
 
     @Test
     public void testEquals() {
-    Color obj1 = new Color(128,0,256);
-    Color obj2 = new Color(128,0,256);
-    assertNotSame(obj1,obj2);
-    assertTrue(obj1.equals(obj2));
-    obj2.setColor(0, 0, 0);
-    assertFalse(obj2.equals(1));
-    assertTrue(obj1.equals(obj1));
-    obj1 = obj2;
-    assertTrue(obj1.equals(obj2));
-    obj1 = null;
-    assertFalse(obj2.equals(obj1));
-    assertFalse(obj2.equals(1));   
+        Color obj1 = new Color(128, 0, 256);
+        Color obj2 = new Color(128, 0, 256);
+        assertNotSame(obj1, obj2);
+        assertTrue(obj1.equals(obj2));
+        obj2.setColor(0, 0, 0);
+        assertFalse(obj2.equals(1));
+        assertTrue(obj1.equals(obj1));
+        obj1 = obj2;
+        assertTrue(obj1.equals(obj2));
+        obj1 = null;
+        assertFalse(obj2.equals(obj1));
+        assertFalse(obj2.equals(1));
     }
 
     /**
@@ -60,14 +60,14 @@ public class ColorTest {
         int red = 0;
         int green = 0;
         int blue = 0;
-        Color obj1 = new Color(red,green,blue);
-        Color obj2 = new Color(red,green,blue);
-        assertNotSame(obj1,obj2);
-        assertEquals(obj1.hashCode(),obj2.hashCode()); 
-        obj1.setColor(0,1,0);
-        assertNotSame(obj1,obj2);
-        assertNotEquals(obj1.hashCode(),obj2.hashCode());
+        Color obj1 = new Color(red, green, blue);
+        Color obj2 = new Color(red, green, blue);
+        assertNotSame(obj1, obj2);
+        assertEquals(obj1.hashCode(), obj2.hashCode());
+        obj1.setColor(0, 1, 0);
+        assertNotSame(obj1, obj2);
+        assertNotEquals(obj1.hashCode(), obj2.hashCode());
         obj1 = obj2;
-        assertEquals(obj1.hashCode(),obj2.hashCode());
+        assertEquals(obj1.hashCode(), obj2.hashCode());
     }
 }

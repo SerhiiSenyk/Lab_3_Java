@@ -12,16 +12,14 @@ import com.openpojo.validation.rule.impl.GetterMustExistRule;
 import com.openpojo.validation.rule.impl.SetterMustExistRule;
 import com.openpojo.validation.test.impl.GetterTester;
 import com.openpojo.validation.test.impl.SetterTester;
-import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
-
-
 
 /**
  *
  * @author Serhii-PC
  */
 public class StationeryKnifeTest {
+
     @Test
     public void validateSettersAndGetters() {
         PojoClass stationeryKnifePojo = PojoClassFactory.getPojoClass(StationeryKnife.class);
@@ -31,11 +29,5 @@ public class StationeryKnifeTest {
         pojoValidator.addTester(new SetterTester());
         pojoValidator.addTester(new GetterTester());
         pojoValidator.runValidation(stationeryKnifePojo);
-    }
-    @Test 
-    public void testToStringNotNull(){
-        StationeryKnife stationeryKnife = new StationeryKnife(2.0, 50.0,
-                new Color(128, 128, 128), 0.2, "ABC", Material.METAL);
-        assertNotNull( stationeryKnife.toString());
     }
 }

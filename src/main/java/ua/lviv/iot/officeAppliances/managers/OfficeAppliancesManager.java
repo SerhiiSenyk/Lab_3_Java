@@ -38,7 +38,7 @@ public class OfficeAppliancesManager implements IofficeAppliancesManager {
     }
 
     @Override
-    final public List<OfficeAppliance> findByColor(Color color) {
+    public List<OfficeAppliance> findByColor(Color color) {
         if (officeAppliances == null) {
             return null;
         }
@@ -47,8 +47,7 @@ public class OfficeAppliancesManager implements IofficeAppliancesManager {
     }
 
     @Override
-    final public void
-            sortByPrice(List<OfficeAppliance> officeAppliances, SortType sortType) {
+    public void sortByPrice(List<OfficeAppliance> officeAppliances, SortType sortType) {
         if (sortType == ASCENDING) {
             Collections.sort(officeAppliances,
                     Comparator.comparing(OfficeAppliance::getPrice));
@@ -59,7 +58,7 @@ public class OfficeAppliancesManager implements IofficeAppliancesManager {
     }
 
     @Override
-    final public void sortByWeight(List<OfficeAppliance> officeAppliances, SortType sortType) {
+    public void sortByWeight(List<OfficeAppliance> officeAppliances, SortType sortType) {
         if (sortType == ASCENDING) {
             Collections.sort(officeAppliances, Comparator.comparing(OfficeAppliance::getWeight));
         } else {
