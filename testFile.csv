@@ -1,0 +1,8 @@
+Price,red,green,blue,Weight,Produder,Material,surface,lenght,width,height,type of frame
+250.0,0,128,128,25.0,Economix,METAL,chalky,100.0,80.0,5.0,aluminum
+Price,red,green,blue,Weight,Produder,Material,Staples size,power
+26.0,0,0,0,100.0,Buromax,METAL_PLUS_PLASTIC,0.7,2
+Price,red,green,blue,Weight,Produder,Material,width of blade
+50.0,128,128,128,0.2,ABC,METAL,2.0
+Price,red,green,blue,Weight,Produder,Material,type,bitSize,lenght,width,height
+35.0,128,128,128,0.1,Company,PLASTIC,engineering,64,15.2,5.0,0.5
