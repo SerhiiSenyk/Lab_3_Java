@@ -21,8 +21,7 @@ public class Stapler extends OfficeAppliance {
         this.staplesSize = staplesSize;
     }
 
-    public Stapler() {
-        //this(0,0);
+    private Stapler() {
     }
 
     public double getStaplesSize() {
@@ -45,5 +44,18 @@ public class Stapler extends OfficeAppliance {
     public String toString() {
         return "Stapler : \n" + "Staples size : " + staplesSize + "\nPower : "
                 + power + super.toString();
+    }
+
+    @Override
+    public String getHeaders() {
+        String sep = ",";
+        return super.getHeaders() + sep + "Staples size"
+                + sep + "power";
+    }
+
+    @Override
+    public String toCSV() {
+        String sep = ",";
+        return super.toCSV() + sep + staplesSize + sep + power;
     }
 }

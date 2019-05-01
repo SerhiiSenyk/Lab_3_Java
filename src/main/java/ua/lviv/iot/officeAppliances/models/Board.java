@@ -24,7 +24,7 @@ public class Board extends OfficeAppliance {
         this.typeOfFrame = typeOfFrame;
     }
 
-    public Board() {
+    private Board() {
     }
 
     public String getSurface() {
@@ -54,9 +54,21 @@ public class Board extends OfficeAppliance {
     @Override
     public String toString() {
         return "Board : " + "\nsurface : " + surface + "\nSize of surface : "
-                + "\n\tlenght : " + getSizeOfSurface().getLenght()
-                + "\n\twidth : " + getSizeOfSurface().getWidth()
-                + "\n\theight : " + getSizeOfSurface().getHeight()
+                + sizeOfSurface.toString()
                 + "\ntypeOfFrame : " + typeOfFrame + super.toString();
+    }
+
+    @Override
+    public String getHeaders() {
+        String sep = ",";
+        return super.getHeaders() + sep + "surface" + sep
+                + sizeOfSurface.getHeaders() + sep + "type of frame";
+    }
+
+    @Override
+    public String toCSV() {
+        String sep = ",";
+        return super.toCSV() + sep + surface + sep + sizeOfSurface.toCSV()
+                + sep + typeOfFrame;
     }
 }

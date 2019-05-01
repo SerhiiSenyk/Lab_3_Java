@@ -79,4 +79,18 @@ public class Color {
         return hash;
     }
 
+    @Override
+    public String toString() {
+        return "\nColor : \n" + "\tred : "
+                + getRed() + "\n\tgreen : " + getGreen()
+                + "\n\tblue : " + getBlue();
+    }
+    public String getHeaders() {
+        String sep = ",";
+        return "red" + sep + "green" + sep + "blue";
+    }
+    public String toCSV() {
+        String sep = ",";
+        return getRed() + sep + getGreen() + sep + getBlue();
+    }
 }

@@ -54,4 +54,20 @@ public class Size {
             this.height = height;
         }
     }
+
+    @Override
+    public String toString() {
+        return "\n\tlenght : " + getLenght() + "\n\twidth : " + getWidth()
+                + "\n\theight : " + getHeight();
+    }
+
+    public String getHeaders() {
+        String sep = ",";
+        return "lenght" + sep + "width" + sep + "height";
+    }
+
+    public String toCSV() {
+        String sep = ",";
+        return getLenght() + sep + getWidth() + sep + getHeight();
+    }
 }
