@@ -42,7 +42,8 @@ public class WriteToCSVFileManager {
         } catch (IOException exception) {
             System.out.println("Error : " + exception.getMessage());
         }
-        try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(csvFile, append), coding);
+        try (FileOutputStream fos = new FileOutputStream(csvFile, append);
+                OutputStreamWriter writer = new OutputStreamWriter(fos, coding);
                 BufferedWriter bufWriter = new BufferedWriter(writer)) {
             for (OfficeAppliance officeAppliance : officeAppliances) {
                 bufWriter.write(officeAppliance.getHeaders());

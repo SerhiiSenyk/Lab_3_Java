@@ -77,7 +77,8 @@ public class WriteToCSVFileManagerTest {
         WriteToCSVFileManager writer = new WriteToCSVFileManager(csvFile,coding, false);
         writer.writeToFile(officeAppliances);
         try (FileInputStream fstream = new FileInputStream(csvFile + ".csv");
-                BufferedReader buffer = new BufferedReader(new InputStreamReader(fstream,coding))) {
+               InputStreamReader reader =  new InputStreamReader(fstream,coding);
+                BufferedReader buffer = new BufferedReader(reader)) {
             for (OfficeAppliance officeAppliance : officeAppliances) {
                 assertEquals(buffer.readLine(), officeAppliance.getHeaders());
                 assertEquals(buffer.readLine(), officeAppliance.toCSV());
