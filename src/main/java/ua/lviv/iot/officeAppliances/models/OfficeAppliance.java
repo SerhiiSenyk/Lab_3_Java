@@ -33,7 +33,7 @@ public abstract class OfficeAppliance {
         ,
         @AttributeOverride(name = "green", column = @Column(name = "green"))
         , 
-        @AttributeOverride(name = "red", column = @Column(name = "red"))
+        @AttributeOverride(name = "blue", column = @Column(name = "blue"))
     })
     private Color color;
     private double weight;
