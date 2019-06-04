@@ -13,13 +13,13 @@ import java.util.List;
  *
  * @author Serhii-PC
  */
-public interface IOfficeAppliancesManager {
+public interface IofficeAppliancesManager {
 
     List<OfficeAppliance> findByColor(Color color);
 
-    void sortByPrice(List<OfficeAppliance> OfficeAppliances,
+    void sortByPrice(List<OfficeAppliance> officeAppliances,
             SortType sortType);
 
-    void sortByWeight(List<OfficeAppliance> OfficeAppliances,
+    void sortByWeight(List<OfficeAppliance> officeAppliances,
             SortType sortType);
 }

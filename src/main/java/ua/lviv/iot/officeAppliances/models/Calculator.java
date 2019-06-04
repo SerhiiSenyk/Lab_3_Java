@@ -56,6 +56,6 @@ public class Calculator extends OfficeAppliance {
         return "Calculator : " + "\nType : " + type + "\nBit size : " + bitSize
                 + "\ncorpus size : " + "\n\tlenght : " + getCorpsSize().getLenght()
                 + "\n\twidth : " + getCorpsSize().getWidth() + "\n\theight : "
-                + getCorpsSize().getHeight() + printFields();
+                + getCorpsSize().getHeight() + super.toString();
     }
 }

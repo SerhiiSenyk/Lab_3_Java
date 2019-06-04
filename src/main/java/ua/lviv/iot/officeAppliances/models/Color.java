@@ -64,4 +64,13 @@ public class Color {
         return red == other.red && green == other.green && blue == other.blue;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 61 * hash + this.red;
+        hash = 61 * hash + this.green;
+        hash = 61 * hash + this.blue;
+        return hash;
+    }
+
 }

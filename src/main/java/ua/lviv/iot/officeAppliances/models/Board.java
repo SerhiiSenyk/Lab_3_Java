@@ -55,9 +55,9 @@ public class Board extends OfficeAppliance {
     @Override
     public String toString() {
         return "Board : " + "\nsurface : " + surface + "\nSize of surface : "
-                + "\n\tlenght : " + getSizeOfSurface().getLenght() + "\n\twidth : "
-                + getSizeOfSurface().getWidth() + "\n\theight : "
-                + getSizeOfSurface().getHeight() + "\ntypeOfFrame : " + typeOfFrame
-                + printFields();
+                + "\n\tlenght : " + getSizeOfSurface().getLenght()
+                + "\n\twidth : " + getSizeOfSurface().getWidth()
+                + "\n\theight : " + getSizeOfSurface().getHeight()
+                + "\ntypeOfFrame : " + typeOfFrame + super.toString();
     }
 }

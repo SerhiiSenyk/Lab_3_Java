@@ -72,10 +72,6 @@ public abstract class OfficeAppliance {
 
     @Override
     public String toString() {
-        return printFields();
-    }
-
-    public String printFields() {
         return "\nPrice : " + getPrice() + "\nColor : \n" + "\tred : "
                 + getColor().getRed() + "\n\tgreen : " + getColor().getGreen()
                 + "\n\tblue : " + getColor().getBlue() + "\nWeight : "
