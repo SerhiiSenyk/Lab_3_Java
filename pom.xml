@@ -3,17 +3,23 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>ua.lviv.iot</groupId>
-    <artifactId>lab-4-office-appliances</artifactId>
+    <artifactId>lab-5-office-appliances</artifactId>
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>lab-4-office-appliances</name>
+    <name>lab-5-office-appliances</name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
+            <version>4.12</version>
             <scope>test</scope>
+        </dependency>
+    
+        <dependency>
+            <groupId>com.openpojo</groupId>
+            <artifactId>openpojo</artifactId>
+            <version>0.8.10</version>
         </dependency>
     </dependencies>
     <build>
@@ -25,7 +31,6 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-                    <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
 			
@@ -44,8 +49,23 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.3</version>
-            </plugin>	
+                <version>0.7.9</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
+            </plugin>
         </plugins>
     </build>
   
@@ -55,24 +75,32 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <configuration>
-                    <configLocation>src\main\resources\checkstyle-configuration.xml</configLocation>
+                    <configLocation>src/main/resources/checkstyle-configuration.xml</configLocation>
                 </configuration>
                 <version>3.0.0</version>
             </plugin>
+		
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
                 <version>3.0.5</version>
             </plugin>
+		
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
                 <version>3.11.0</version>
+			
                 <configuration>
                     <targetJdk>1.8</targetJdk>
                     <skipEmptyReport>false</skipEmptyReport>
                 </configuration>
+			
             </plugin>
+	
         </plugins>
     </reporting>
- </project>
+  
+  
+</project>
+

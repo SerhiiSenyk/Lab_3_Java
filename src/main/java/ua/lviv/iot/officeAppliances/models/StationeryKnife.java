@@ -35,6 +35,5 @@ public class StationeryKnife extends OfficeAppliance {
     public String toString() {
         return "StationeryKnife : " + "\nwidth of blade : "
                 + widthOfBlade + super.toString();
-
     }
 }

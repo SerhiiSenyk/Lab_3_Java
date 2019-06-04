@@ -33,12 +33,15 @@ public class OfficeAppliancesManager implements IofficeAppliancesManager {
         return officeAppliances;
     }
 
-     public void setOfficeAppliances(List<OfficeAppliance> officeAppliances) {
+    public void setOfficeAppliances(List<OfficeAppliance> officeAppliances) {
         this.officeAppliances = officeAppliances;
     }
 
     @Override
     public List<OfficeAppliance> findByColor(Color color) {
+        if (officeAppliances == null) {
+            return null;
+        }
         return officeAppliances.stream().filter(col -> col.getColor().
                 equals(color)).collect(Collectors.toList());
     }
@@ -62,4 +65,5 @@ public class OfficeAppliancesManager implements IofficeAppliancesManager {
             Collections.sort(officeAppliances, Comparator.comparing(OfficeAppliance::getWeight).reversed());
         }
     }
+
 }

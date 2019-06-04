@@ -27,7 +27,6 @@ public abstract class OfficeAppliance {
     }
 
     public OfficeAppliance() {
-        //this(0, , 0, 0, 0);
     }
 
     public double getPrice() {
