@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ua.lviv.iot</groupId>
-    <artifactId>db-sample-lab8</artifactId>
+    <artifactId>rest-servise</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>db-sample-lab8</name>
+    <name>rest-servise</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -30,6 +30,10 @@
             <scope>test</scope>
         </dependency>
         
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         
         <dependency>
             <groupId>mysql</groupId>
@@ -55,7 +59,12 @@
             <artifactId>openpojo</artifactId>
             <version>0.8.10</version>
         </dependency>
-        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.1.6.RELEASE</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
 
     <build>
