@@ -19,8 +19,7 @@ public class StationeryKnife extends OfficeAppliance {
         this.widthOfBlade = widthOfBlade;
     }
 
-    public StationeryKnife() {
-        //this(0.0);
+    private StationeryKnife() {
     }
 
     public double getWidthOfBlade() {
@@ -35,5 +34,17 @@ public class StationeryKnife extends OfficeAppliance {
     public String toString() {
         return "StationeryKnife : " + "\nwidth of blade : "
                 + widthOfBlade + super.toString();
+    }
+
+    @Override
+    public String getHeaders() {
+        String sep = ",";
+        return super.getHeaders() + sep + "width of blade";
+    }
+
+    @Override
+    public String toCSV() {
+        String sep = ",";
+        return super.toCSV() + sep + widthOfBlade;
     }
 }
