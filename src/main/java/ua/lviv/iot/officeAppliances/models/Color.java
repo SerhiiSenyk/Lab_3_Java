@@ -5,10 +5,13 @@
  */
 package ua.lviv.iot.officeAppliances.models;
 
+import javax.persistence.Embeddable;
+
 /**
  *
  * @author Serhii-PC
  */
+@Embeddable
 public class Color {
 
     private int red;

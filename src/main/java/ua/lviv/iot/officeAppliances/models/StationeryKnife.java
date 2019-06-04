@@ -5,10 +5,13 @@
  */
 package ua.lviv.iot.officeAppliances.models;
 
+import javax.persistence.Entity;
+
 /**
  *
  * @author Serhii-PC
  */
+@Entity
 public class StationeryKnife extends OfficeAppliance {
 
     private double widthOfBlade;

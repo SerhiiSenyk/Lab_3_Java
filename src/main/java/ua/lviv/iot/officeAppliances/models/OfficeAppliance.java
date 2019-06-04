@@ -3,52 +3,42 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
- /*Дана робота присвячена роботі з файлами і операції запису, і також базується на основі
-лабораторних 3-5. Для реалізованої ієрархії класів в 3-й лабораторній слід реалізувати запис
-списку об’єктів, які присутні в менеджері, в CSV-файл. Звертаю увагу, що код слід реалізувати
-лише після здачі 3-5 лабораторних (здаються окремо, при спробі здачі всіх робіт одночасно
-студент отримає доповнення до його задачі 3).
-Нехай в рамках лабораторної 3 було реалізовано клас CrocodileManager, який містить список
-об’єктів, похідних від класу Crocodile. Для кожного класу, похідного від Crocodile і в самому класі
-Crocodile слід реалізувати два методи:
-pubic String getHeaders() { … } - повертає стрічку з атрибутів, присутніх в даному класі,
-розділеному через кому
-pubic String toCSV() { ... } - повертає значення атрибутів (значення полів), даного об'єкта,
-розділеного комами
-Реалізація методу toCSV в дочірніх класах має викликати також цей метод із батьківського
-класу. Поля, які оголошені в батьківському класі, мають конвертуватись в стрічку, розділену
-комами, в батьківському класі, наприклад:
-class Crocodile {
-private String origin;
-…
-pubic String getHeaders() {
-return “origin”;
-}
-}
-class Aligator extends Crocodile {
-private int maxSpeed;
-…
-pubic String getHeaders() {
-return super.getHeaders() + “,” + “maxSpeed”;
-}
-}
-Для реалізації запису у файл слід реалізувати окремий клас Writer (наприклад - CrocodileWriter),
-який міститиме метод public void writeToFile(List<Crocodile> crocodiles). Виклик даного методу
-слід реалізувати з тестів
-Код має відповідати code convention
- */
 package ua.lviv.iot.officeAppliances.models;
+
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  *
  * @author Serhii-PC
  */
+@Entity
 public abstract class OfficeAppliance {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private double price;
+    @Embedded
+    @AttributeOverrides(value = {
+        @AttributeOverride(name = "red", column = @Column(name = "red"))
+        ,
+        @AttributeOverride(name = "green", column = @Column(name = "green"))
+        , 
+        @AttributeOverride(name = "blue", column = @Column(name = "blue"))
+    })
     private Color color;
     private double weight;
     private String producer;
+    @Enumerated(EnumType.STRING)
     private Material material;
 
     public OfficeAppliance(double price, Color color, double weight,
@@ -61,6 +51,14 @@ public abstract class OfficeAppliance {
     }
 
     public OfficeAppliance() {
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public double getPrice() {
@@ -121,4 +119,5 @@ public abstract class OfficeAppliance {
         return getPrice() + sep + color.toCSV() + sep
                 + getWeight() + sep + getProducer() + sep + getMaterial();
     }
+
 }

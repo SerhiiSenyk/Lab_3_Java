@@ -5,10 +5,13 @@
  */
 package ua.lviv.iot.officeAppliances.models;
 
+import javax.persistence.Entity;
+
 /**
  *
  * @author Serhii-PC
  */
+@Entity
 public class Stapler extends OfficeAppliance {
 
     private double staplesSize;
@@ -58,4 +61,5 @@ public class Stapler extends OfficeAppliance {
         String sep = ",";
         return super.toCSV() + sep + staplesSize + sep + power;
     }
+
 }
